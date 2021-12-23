@@ -4,4 +4,5 @@ $(document).ready(function(){
     $('.tab-2').appendTo('#Notes');
     $('.tab-3').appendTo('#General Information');
     $('.tab-4').appendTo('#Other Documents');
+    $('.tab-5').appendTo('#Approved Materials');
 });
