@@ -39,9 +39,12 @@
         text-align: center;
         line-height: 48px;
         height: 48px;
-        padding: 0;
-        margin: 0;
+        // padding: 0;
+        // margin: 0;
+        margin: auto -.25rem;
         text-transform: uppercase;
+        background-color: #f2f2f2;
+        border: 2px solid $primary;
 
         a {
             color: $primary;
@@ -49,7 +52,7 @@
             display: block;
             width: 100%;
             height: 100%;
-            padding: 0 24px;
+            padding:.25rem 1.25rem;
             font-size: 14px;
             text-overflow: ellipsis;
             overflow: hidden;
@@ -58,9 +61,23 @@
             &:focus,
             &:hover,
             &:active{
-                color: $secondary;
+                background-color: $secondary;
+                color: white;
+                text-decoration: none;
+            }
+
+            &.active{
+                background-color: $secondary;
+                border: 2px solid white;
+                color: white;
+                text-decoration: none;
             }
         }
+
+        // &:first-child{
+        //     border-top-left-radius: 1rem;
+        //     border-bottom-left-radius: 1rem;
+        // }   
     }
 }
 
@@ -68,15 +85,16 @@
 .tabs .tab.disabled a:hover {
     color: rgba(238, 110, 115, 0.4);
     cursor: default;
+    text-decoration: none;
 }
 
-.tabs .indicator {
-    position: absolute;
-    bottom: 0;
-    height: 2px;
-    background-color: #f6b2b5;
-    will-change: left, right;
-}
+// .tabs .indicator {
+//     position: absolute;
+//     bottom: 0;
+//     height: 2px;
+//     background-color: $secondary;
+//     will-change: left, right;
+// }
 
 @media only screen and (max-width : 992px) {
     .tabs {
@@ -90,4 +108,9 @@
     .tabs .tab a {
         padding: 0 12px;
     }
+}
+
+.col.active{
+    border:2px solid $secondary;
+    border-radius: 1rem;
 }
